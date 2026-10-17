@@ -23,11 +23,11 @@ A Canada-wide delivery brand. The visual language comes from the supplied van ar
 ## Motion
 - No text reveal animation. The hero uses a short real delivery video that pauses offscreen or when reduced motion is requested.
 - Partner logos move in a continuous rail, pause on hover, and become a stationary list for reduced-motion visitors.
-- The coverage map is static until a visitor pans or zooms it; it has no automatic movement.
+- The coverage map shows one illustrative warehouse → pickup → delivery journey using a restrained moving van. Motion pauses offscreen and when the document is hidden; reduced-motion visitors see a static route.
 - Hover and press feedback use short transform or colour transitions only.
 
 ## Map and claims
 - Leaflet and local Natural Earth country and province boundaries provide the free interactive geographic map with visible attribution.
-- City labels are geographic references rather than depot locations or live vehicle positions.
+- City labels are geographic references. The three route stops and van position are illustrative, not depot locations or live tracking.
 - Route availability and timing are discussed per request.
 - Regulated goods are discussed only where permitted and with the required authorizations.

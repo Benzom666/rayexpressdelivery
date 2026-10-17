@@ -132,13 +132,14 @@
     <div class="rx-map-heading"><div><p class="rx-label">Coverage</p><h2 id="coverage-h">Built to move<br><em>across Canada.</em></h2></div><p>From local pickups to longer routes, tell us the origin, destination and delivery window. We’ll help plan the right service.</p></div>
     <div class="rx-coverage-layout">
       <div class="rx-map-shell">
-        <div class="rx-map-toolbar"><span>CANADA / GEOGRAPHIC VIEW</span><span>DRAG TO EXPLORE</span></div>
-        <div id="coverageMap" class="rx-map" role="region" aria-label="Interactive geographic map of Canada showing provinces and selected cities"></div>
-        <div class="rx-map-footer"><span>Selected cities are geographic references, not depot locations.</span><span>Map data: <a href="https://www.naturalearthdata.com/" target="_blank" rel="noopener">Natural Earth</a></span></div>
+        <div class="rx-map-toolbar"><span>CANADA / EXAMPLE JOURNEY</span><span id="routeStatus">WAREHOUSE DISPATCH</span></div>
+        <div id="coverageMap" class="rx-map" role="region" aria-label="Interactive map of Canada with an illustrative delivery route from warehouse to pickup to delivery"></div>
+        <div class="rx-map-footer"><span>Illustrative journey · vehicle positions are not live tracking.</span><span>Map data: <a href="https://www.naturalearthdata.com/" target="_blank" rel="noopener">Natural Earth</a></span></div>
       </div>
       <aside class="rx-coverage-panel" aria-label="Coverage details">
-        <div><span class="rx-coverage-index">COVERAGE PLANNING</span><h3>One country.<br>Many kinds of routes.</h3><p>Every request starts with the shipment. We discuss timing, handling and the places it needs to move between.</p></div>
-        <dl><div><dt>LOCAL</dt><dd>City and nearby-area deliveries</dd></div><div><dt>REGIONAL</dt><dd>Routes between communities</dd></div><div><dt>NATIONAL</dt><dd>Cross-country delivery planning</dd></div></dl>
+        <div><span class="rx-coverage-index">THE DELIVERY JOURNEY</span><h3>From warehouse<br>to doorstep.</h3><p>Follow one example route from dispatch, to a parcel pickup, and on to its destination.</p></div>
+        <ol class="rx-route-stages" id="routeStages" aria-label="Example route stages"><li class="is-current" aria-current="step"><span>01</span><div><strong>Warehouse</strong><small>Vancouver · dispatch</small></div></li><li><span>02</span><div><strong>Pickup</strong><small>Calgary · pickup stop</small></div></li><li><span>03</span><div><strong>Delivery</strong><small>Montréal · delivery stop</small></div></li></ol>
+        <button class="rx-route-replay" id="routeReplay" type="button">Replay journey</button>
         <a href="contact.html" class="rx-coverage-link">Ask about your route <span aria-hidden="true">↗</span></a>
       </aside>
     </div>

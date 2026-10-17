@@ -5,3 +5,4 @@
 - Canada outline and provincial boundaries: [Natural Earth](https://www.naturalearthdata.com/about/terms-of-use/) public-domain data, rendered with [Leaflet](https://leafletjs.com/). Attribution is displayed on the map.
 - Existing project photographs are retained from the prior site build.
 - Careers and service photographs (`careers-courier.jpg`, `services-overview.jpg`, and the seven service images) were generated for this site with OpenAI image generation.
+- The transparent van used in the example map journey (`assets/map-delivery-van.webp`) was generated for this site with OpenAI image generation.
