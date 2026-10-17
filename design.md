@@ -1,7 +1,7 @@
 # Ray Express design system
 
 ## Purpose
-A Canada-wide delivery brand with Toronto roots and local GTA expertise. The visual language comes from the supplied van artwork: night asphalt, sky blue lettering and a warm orange vehicle.
+A Canada-wide delivery brand. The visual language comes from the supplied van artwork: night asphalt, sky blue lettering and a warm orange vehicle.
 
 ## Theme
 - Dark asphalt `--color-paper` with slightly lighter route panels `--color-paper-2` and `--color-card`.
@@ -16,18 +16,18 @@ A Canada-wide delivery brand with Toronto roots and local GTA expertise. The vis
 - Use the named 4 point spacing scale in `tokens.css`.
 
 ## Pages
-- Home: large static hero, service grid, interactive Canada map, special handling, process and contact CTA.
+- Home: still hero copy beside real courier footage, service grid, interactive Canada map, special handling, process and contact CTA.
 - Content pages: photographic hero, clear section sequence, shared header and footer.
 - Contact: direct details and a quote form that opens a prefilled email draft.
 
 ## Motion
-- No top of page or text reveal animation.
-- Illustrated vehicles move on national routes and a GTA route when the map enters view; they stop when out of view.
+- No text reveal animation. The hero uses a short real delivery video that pauses offscreen or when reduced motion is requested.
+- Illustrated vehicles move on national routes when the map enters view; they stop when out of view.
 - Respect reduced motion and keep the map vehicle still for visitors who request it.
 - Hover and press feedback use short transform or colour transitions only.
 
 ## Map and claims
-- Leaflet and OpenStreetMap provide the free interactive base map with visible attribution.
+- Leaflet and a local Natural Earth outline provide the free interactive map with visible attribution.
 - The moving vehicle is expressly an illustration, not a live courier position.
 - Canada markers show coverage cities; the map does not promise a depot or guaranteed timing in every city.
 - Regulated goods are discussed only where permitted and with the required authorizations.

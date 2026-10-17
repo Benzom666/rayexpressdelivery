@@ -2,6 +2,23 @@
 (function () {
   "use strict";
   var reduced = window.matchMedia("(prefers-reduced-motion: reduce)").matches;
+  var heroVideo = document.querySelector(".rx-hero-video");
+  if (heroVideo) {
+    var heroMotion = window.matchMedia("(prefers-reduced-motion: reduce)");
+    var heroVisible = true;
+    function syncHeroMotion() {
+      if (heroMotion.matches || !heroVisible) heroVideo.pause();
+      else { var play = heroVideo.play(); if (play && play.catch) play.catch(function () {}); }
+    }
+    if ("IntersectionObserver" in window) {
+      new IntersectionObserver(function (entries) {
+        heroVisible = entries[0].isIntersecting;
+        syncHeroMotion();
+      }, { threshold: .05 }).observe(heroVideo);
+    }
+    heroMotion.addEventListener("change", syncHeroMotion);
+    syncHeroMotion();
+  }
 
   /* header: transparent over hero -> solid paper after scroll */
   var hdr = document.getElementById("hdr");
