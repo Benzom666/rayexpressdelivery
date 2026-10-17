@@ -391,6 +391,7 @@ body{background:var(--paper);color:var(--ink)}
 .serif-i{color:var(--ray)}
 .sec .serif-i,.phero .serif-i{color:var(--deep)}
 .form-card,.qcard,.value{background:var(--card)}
+.careers-form-card{background:#fff;border-color:#dbe3e8;color:#142431}
 .field input,.field select,.field textarea{background:#e9f0f2;color:#101820;border-color:var(--line)}
 .field input:focus,.field select:focus,.field textarea:focus{border-color:var(--deep);box-shadow:0 0 0 3px rgba(248,131,72,.22)}
 .side,.cta-band{background:#142431}
@@ -419,7 +420,7 @@ footer{background:#080f17}
 .rx-hero .btn-line,.rx-end-cta .btn-line{border-color:#7b929f;color:#f7fbfc}
 .rx-hero-note{display:flex;align-items:center;gap:.8rem;margin-top:3.5rem;font-family:var(--font-mono);font-size:.7rem;color:#9eb0bd;letter-spacing:.1em;text-transform:uppercase}
 .rx-bar{width:2rem;height:2px;background:var(--deep)}
-.rx-hero-visual{position:relative;transform:rotate(2deg)}
+.rx-hero-visual{position:relative}
 .rx-hero-scene{position:relative;overflow:hidden;aspect-ratio:1.05;background:#142633;border:1px solid #456071;box-shadow:26px 30px 0 rgba(132,225,242,.08),0 32px 70px rgba(0,0,0,.38)}
 .rx-hero-video{display:block;width:100%;height:100%;object-fit:cover;object-position:54% center;filter:saturate(.74) contrast(1.07) brightness(.82)}
 .rx-video-shade{position:absolute;inset:0;background:linear-gradient(180deg,rgba(5,17,26,.42),transparent 30%,transparent 66%,rgba(5,17,26,.7));pointer-events:none}

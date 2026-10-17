@@ -1,1 +1,8 @@
-{"cleanUrls": true, "trailingSlash": false}
+{
+  "cleanUrls": true,
+  "trailingSlash": false,
+  "redirects": [
+    { "source": "/drivers", "destination": "/careers", "permanent": true },
+    { "source": "/drivers.html", "destination": "/careers", "permanent": true }
+  ]
+}

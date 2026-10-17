@@ -3,8 +3,8 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Drive With RAY — Courier Signup | RAY EXPRESS</title>
-<meta name="description" content="Become a RAY EXPRESS courier. Flexible routes, weekly payouts and an app that guides every stop. Apply in minutes.">
+<title>Careers — Drive With RAY | RAY EXPRESS</title>
+<meta name="description" content="Explore careers at RAY EXPRESS. Join our courier team for flexible routes, weekly payouts and delivery work across Canada.">
 <meta name="theme-color" content="#0B0D10">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -28,7 +28,7 @@
       <a href="tracking.html">Tracking</a>
       <a href="technology.html">Technology</a>
       <a href="about.html">About</a>
-      <a href="drivers.html" aria-current="page">Drivers</a>
+      <a href="careers.html" aria-current="page">Careers</a>
       <a href="contact.html">Contact</a>
     </nav>
     <div class="hdr-cta">
@@ -45,7 +45,7 @@
     <a class="mlink" href="tracking.html">Tracking</a>
     <a class="mlink" href="technology.html">Technology</a>
     <a class="mlink" href="about.html">About</a>
-    <a class="mlink" href="drivers.html">Drivers</a>
+    <a class="mlink" href="careers.html">Careers</a>
     <a class="mlink" href="contact.html">Contact</a>
   </nav>
   <div class="row">
@@ -59,8 +59,8 @@
     <img class="bg" src="assets/depot.jpg" alt="Delivery truck at the depot at dawn, ready for the day's routes" fetchpriority="high">
     <div class="scrim" aria-hidden="true"></div>
     <div class="phero-inner">
-      <p class="crumb rv"><a href="index.html">HOME</a> / DRIVERS</p>
-      <h1 id="pg-h" class="rv rv-d1">Drive with <span class="serif-i">RAY.</span></h1>
+      <p class="crumb rv"><a href="index.html">HOME</a> / CAREERS</p>
+      <h1 id="pg-h" class="rv rv-d1">Careers at <span class="serif-i">RAY.</span></h1>
       <p class="lede rv rv-d2">Interested in delivering with Ray Express? Explore the role and apply to help move shipments across Canada.</p>
     </div>
   </section>
@@ -104,14 +104,29 @@
         <h2 id="apply-h">Driver application.</h2>
         <p class="lede">Takes about five minutes. We review every application personally and reply within two business days.</p>
       </div>
-      <div class="form-card rv rv-d1">
+      <div class="form-card careers-form-card rv rv-d1">
         <div id="tripetto-odjl75"></div>
         <script src="https://cdn.jsdelivr.net/npm/@tripetto/runner"></script>
         <script src="https://cdn.jsdelivr.net/npm/@tripetto/runner-classic"></script>
         <script src="https://cdn.jsdelivr.net/npm/@tripetto/studio"></script>
         <script>
         TripettoStudio.form({
-            runner: TripettoClassic,
+            runner: {
+                run: function (props) {
+                    return TripettoClassic.run({
+                        ...props,
+                        styles: Promise.resolve(props.styles).then(function (styles) {
+                            return {
+                                ...styles,
+                                color: "#a94314",
+                                background: { ...styles?.background, color: "#ffffff", opacity: 100 },
+                                inputs: { ...styles?.inputs, backgroundColor: "#ffffff", borderColor: "#b8c4cc", textColor: "#142431" },
+                                buttons: { ...styles?.buttons, baseColor: "#f88348", textColor: "#101820" }
+                            };
+                        })
+                    });
+                }
+            },
             token: "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VyIjoieE9ZbU5xTXoxL2lTVzhZS3VLSzhqZW5xUTRSN3RROFhuQWo5R2lKOXBoaz0iLCJkZWZpbml0aW9uIjoidjYyZ1dTdGRoUjd1WTl5R3BTY0cvMmluWlk3M3VvakpNVFR1SStOdy9tbz0iLCJ0eXBlIjoiY29sbGVjdCJ9.PB6r80ckuH3p2PUP0gnZeW-XIqSkNVtToGGRcx863Zw",
             element: "tripetto-odjl75"
         });
@@ -135,7 +150,7 @@
       <nav class="f-col" aria-label="Solutions"><h3>SOLUTIONS</h3><ul>
         <li><a href="solutions.html#same-day">Same-Day</a></li><li><a href="solutions.html#last-mile">Last-Mile</a></li><li><a href="solutions.html#scheduled">Scheduled</a></li><li><a href="solutions.html#ecommerce">E-Commerce</a></li><li><a href="solutions.html#returns">Returns</a></li><li><a href="solutions.html#special">Special delivery</a></li></ul></nav>
       <nav class="f-col" aria-label="Company"><h3>COMPANY</h3><ul>
-        <li><a href="about.html">About</a></li><li><a href="drivers.html">Drive for RAY</a></li><li><a href="technology.html">Technology</a></li><li><a href="contact.html">Careers</a></li><li><a href="contact.html">Contact</a></li></ul></nav>
+        <li><a href="about.html">About</a></li><li><a href="technology.html">Technology</a></li><li><a href="careers.html">Careers</a></li><li><a href="contact.html">Contact</a></li></ul></nav>
       <nav class="f-col" aria-label="Resources"><h3>RESOURCES</h3><ul>
         <li><a href="tracking.html">Track shipment</a></li><li><a href="contact.html">Get a quote</a></li><li><a href="tracking.html#faq">FAQ</a></li><li><a href="contact.html">Support</a></li></ul></nav>
     </div>
