@@ -35,40 +35,6 @@
     });
   }
 
-  /* parallax on page-hero backgrounds */
-  var pheroImg = document.querySelector(".phero img.bg");
-  if (pheroImg && !reduced) {
-    window.addEventListener("scroll", function () {
-      var y = window.scrollY || 0;
-      if (y < window.innerHeight) pheroImg.style.transform = "translateY(" + y * 0.18 + "px)";
-    }, { passive: true });
-  }
-
-  /* reveal on scroll */
-  var io = new IntersectionObserver(function (es) {
-    es.forEach(function (e) {
-      if (e.isIntersecting) { e.target.classList.add("in"); io.unobserve(e.target); }
-    });
-  }, { threshold: 0.12, rootMargin: "0px 0px -6% 0px" });
-  document.querySelectorAll(".rv").forEach(function (el) { io.observe(el); });
-
-  /* animated counters */
-  var cio = new IntersectionObserver(function (es) {
-    es.forEach(function (e) {
-      if (!e.isIntersecting) return;
-      cio.unobserve(e.target);
-      var el = e.target, end = parseFloat(el.dataset.count), t0 = null;
-      if (reduced || isNaN(end)) { el.textContent = el.dataset.count; return; }
-      function step(t) {
-        if (!t0) t0 = t;
-        var p = Math.min((t - t0) / 1400, 1);
-        el.textContent = Math.round(end * (1 - Math.pow(1 - p, 3)));
-        if (p < 1) requestAnimationFrame(step);
-      }
-      requestAnimationFrame(step);
-    });
-  }, { threshold: 0.5 });
-  document.querySelectorAll("[data-count]").forEach(function (el) { cio.observe(el); });
 
   /* ---- tracking demo (tracking.html + home quick form) ---- */
   var DEMO = {
@@ -89,8 +55,14 @@
     if (q && input) input.value = q;
     window.renderTrack = function (num) {
       var key = (num || "").trim().toUpperCase();
-      var d = DEMO[key] || { eta: "1–2 business days", dest: "Destination confirmed after first scan", status: "Order received", scan: "Last scan just now · Booking confirmed",
-        steps: [["Order received", "Just now", 2], ["Picked up", "Scheduled", 0], ["In transit", "Pending", 0], ["Out for delivery", "Pending", 0], ["Delivered", "Pending", 0]] };
+      var d = DEMO[key];
+      var notice = document.getElementById("trackNotice");
+      if (!d) {
+        res.classList.remove("show");
+        if (notice) notice.textContent = "That number isn't part of this preview. For a real shipment update, contact our team.";
+        return;
+      }
+      if (notice) notice.textContent = "Illustrated sample only. For a real shipment update, contact our team.";
       document.getElementById("tNum").textContent = key || "—";
       document.getElementById("tEta").textContent = d.eta;
       document.getElementById("tDest").textContent = d.dest;
@@ -125,27 +97,12 @@
     if (q) window.renderTrack(q);
   }
 
-  /* dashboard live tick */
-  if (!reduced) {
-    var a = document.querySelector('[data-live="active"]');
-    var c = document.querySelector('[data-live="couriers"]');
-    if (a || c) {
-      var av = 1284, cv = 312;
-      setInterval(function () {
-        av += Math.random() > 0.45 ? 1 : -1;
-        cv += Math.random() > 0.5 ? 1 : -1;
-        if (a) a.textContent = av.toLocaleString();
-        if (c) c.textContent = cv;
-      }, 4000);
-    }
-  }
-
-  /* quote form (demo validation) */
+  /* quote form: compose a real email without implying it was submitted */
   var qf = document.getElementById("quoteForm");
   if (qf) {
     qf.addEventListener("submit", function (e) {
       e.preventDefault();
-      var ids = ["fName", "fCo", "fEmail", "fPick", "fDrop"];
+      var ids = ["fName", "fEmail", "fPick", "fDrop"];
       var ok = true, firstBad = null;
       ids.forEach(function (id) {
         var f = document.getElementById(id);
@@ -155,9 +112,14 @@
         if (bad) { ok = false; firstBad = firstBad || f; }
       });
       if (!ok) { firstBad.focus(); return; }
-      document.getElementById("formRef").textContent = "· Ref RQ-" + Math.floor(10000 + Math.random() * 89999);
+      var data = new FormData(qf);
+      var fields = [["Name", "name"], ["Company", "company"], ["Email", "email"], ["Phone", "phone"],
+        ["Pickup", "pickup"], ["Delivery area", "delivery"], ["Shipments per week", "volume"],
+        ["Frequency", "frequency"], ["Service", "service"], ["Message", "message"]];
+      var body = fields.map(function (pair) { return pair[0] + ": " + (data.get(pair[1]) || "—"); }).join("\n");
+      var subject = "Ray Express quote request — " + (data.get("company") || data.get("name"));
+      window.location.href = "mailto:info@rayexpressdelivery.com?subject=" + encodeURIComponent(subject) + "&body=" + encodeURIComponent(body);
       document.getElementById("formOk").classList.add("show");
-      qf.reset();
       document.getElementById("formOk").scrollIntoView({ behavior: reduced ? "auto" : "smooth", block: "nearest" });
     });
   }

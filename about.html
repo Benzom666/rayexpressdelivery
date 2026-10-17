@@ -10,6 +10,7 @@
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;600;700&family=Instrument+Serif:ital@0;1&family=Manrope:wght@400;500;600;700;800&family=IBM+Plex+Mono:wght@400;500&display=swap" rel="stylesheet">
 <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Crect width='32' height='32' rx='7' fill='%230B0D10'/%3E%3Cpath d='M7 22 21 8' stroke='%2300E5FF' stroke-width='3.4' stroke-linecap='round'/%3E%3Cpath d='M15 22h9v-9' stroke='%23fff' stroke-width='3' stroke-linecap='round' stroke-linejoin='round' fill='none'/%3E%3C/svg%3E">
+<link rel="stylesheet" href="tokens.css">
 <link rel="stylesheet" href="styles.css">
 </head>
 <body>
@@ -60,7 +61,7 @@
     <div class="phero-inner">
       <p class="crumb rv"><a href="index.html">HOME</a> / ABOUT</p>
       <h1 id="pg-h" class="rv rv-d1">Not just couriers. <span class="serif-i">Infrastructure.</span></h1>
-      <p class="lede rv rv-d2">Anyone can move a box. We build the system that moves ten thousand of them — on time, visibly, and with proof.</p>
+      <p class="lede rv rv-d2">Delivery across Canada, built around the people and businesses waiting at each end of the route.</p>
     </div>
   </section>
 
@@ -68,14 +69,14 @@
     <div class="wrap split">
       <div class="rv">
         <p class="kicker"><span class="no">01</span> Our story</p>
-        <h2 id="story-h" style="font-size:clamp(1.8rem,3.6vw,2.6rem);letter-spacing:-.02em;margin:1rem 0 .8rem">The last mile was broken. So we rebuilt it.</h2>
-        <p>Missed windows, silent vans, “we attempted delivery” notes for doorbells nobody rang. RAY EXPRESS started with a simple conviction: the final mile deserves the same engineering as everything before it.</p>
-        <p>Today we run zoned courier networks, depot operations and a software platform as one thing — so a retailer’s promise at checkout is the same promise kept at the door.</p>
+        <h2 id="story-h" style="font-size:clamp(1.8rem,3.6vw,2.6rem);letter-spacing:-.02em;margin:1rem 0 .8rem">Delivery starts with a real conversation.</h2>
+        <p>Ray Express works with people and businesses who need a delivery plan that fits the job. Everyday parcels, recurring business routes and items needing special handling all start with the same question: what does this shipment need?</p>
+        <p>Our Toronto roots give us a close view of the GTA. Our service reaches across Canada, connecting local detail with a wider route.</p>
         <div class="numstrip">
-          <div><b><span data-count="99">0</span>%+</b><span>ON-TIME TARGET*</span></div>
-          <div><b>24/7</b><span>VISIBILITY</span></div>
-          <div><b>±6<span style="font-size:1rem"> MIN</span></b><span>ETA ACCURACY*</span></div>
-          <div><b>100%</b><span>DROPS WITH PROOF</span></div>
+          <div><b>CA</b><span>CANADA-WIDE</span></div>
+          <div><b>GTA</b><span>LOCAL KNOWLEDGE</span></div>
+          <div><b>B2B</b><span>BUSINESS ROUTES</span></div>
+          <div><b>↗</b><span>SPECIAL DELIVERY</span></div>
         </div>
       </div>
       <figure class="ph ph-45 rv rv-d1">
@@ -89,7 +90,7 @@
     <div class="wrap">
       <p class="kicker rv"><span class="no">02</span> Network</p>
       <h2 id="net-h" class="rv rv-d1" style="font-size:clamp(1.8rem,3.6vw,2.6rem);letter-spacing:-.02em;margin:1rem 0 .8rem">Built to move across <span class="serif-i">your map.</span></h2>
-      <p class="lede rv rv-d1">Depots, zones and live lanes — coverage is drawn with your team around the postcodes you actually serve. Map stylized; real coverage defined together.</p>
+      <p class="lede rv rv-d1">From local GTA pickups to destinations across Canada, tell us your origin, destination and timing. We’ll discuss the right route for your shipment. <a href="index.html#coverage">Explore the coverage map</a>.</p>
       <figure class="ph ph-169 rv rv-d2" style="margin-top:1.8rem">
         <img src="assets/aisle.jpg" alt="Tall warehouse aisle in a regional distribution depot" loading="lazy">
         <figcaption>REGIONAL DEPOT · SORTED NIGHTLY</figcaption>
@@ -115,7 +116,6 @@
         </div>
         <div class="giant" aria-hidden="true">US→</div>
       </div>
-      <p class="fine">* Illustrative targets for design preview — replace with verified company figures before launch.</p>
     </div>
   </section>
 </main>
@@ -128,24 +128,18 @@
           <img class="brand-logo" src="assets/ray-express-logo.jpg" alt="" width="44" height="44">
           <span><b style="color:#fff">RAY <span>EXPRESS</span></b><small>FINAL-MILE LOGISTICS</small></span>
         </a>
-        <p>Delivering the final mile with precision — technology-driven last-mile logistics for businesses that can’t miss a delivery.</p>
-        <div class="socials">
-          <a href="#" aria-label="RAY EXPRESS on X"><svg width="17" height="17" viewBox="0 0 24 24" fill="currentColor"><path d="M18.9 2H22l-6.8 7.8L23.2 22h-6.3l-4.9-6.4L6.4 22H3.3l7.3-8.3L1.6 2H8l4.4 5.9L18.9 2Zm-1.1 18h1.7L7 3.9H5.2L17.8 20Z"/></svg></a>
-          <a href="#" aria-label="RAY EXPRESS on LinkedIn"><svg width="17" height="17" viewBox="0 0 24 24" fill="currentColor"><path d="M6.5 8.8v12H2.6v-12h3.9ZM4.5 2.7a2.3 2.3 0 1 1 0 4.6 2.3 2.3 0 0 1 0-4.6Zm7.6 8.2c.6-1 1.9-2.1 4-2.1 2.9 0 4.3 1.9 4.3 5.4v6.6h-3.9v-6c0-1.5-.5-2.5-1.9-2.5-1.4 0-2.2 1-2.5 1.9v6.6H8.2v-12h3.9v2.1Z"/></svg></a>
-          <a href="#" aria-label="RAY EXPRESS on Instagram"><svg width="17" height="17" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><rect x="3" y="3" width="18" height="18" rx="5"/><circle cx="12" cy="12" r="4"/><circle cx="17.2" cy="6.8" r="1.2" fill="currentColor" stroke="none"/></svg></a>
-        </div>
+        <p>Canada-wide delivery for everyday parcels, business routes and shipments that need extra care.</p>
+        <div class="rx-footer-contact"><a href="tel:+16476948924">647 694 8924</a><a href="tel:+12269776238">226 977 6238</a><a href="mailto:info@rayexpressdelivery.com">info@rayexpressdelivery.com</a><a href="mailto:info.rayexpressdelivery@gmail.com">info.rayexpressdelivery@gmail.com</a></div>
       </div>
       <nav class="f-col" aria-label="Solutions"><h3>SOLUTIONS</h3><ul>
-        <li><a href="solutions.html#same-day">Same-Day</a></li><li><a href="solutions.html#last-mile">Last-Mile</a></li><li><a href="solutions.html#scheduled">Scheduled</a></li><li><a href="solutions.html#ecommerce">E-Commerce</a></li><li><a href="solutions.html#returns">Returns</a></li></ul></nav>
+        <li><a href="solutions.html#same-day">Same-Day</a></li><li><a href="solutions.html#last-mile">Last-Mile</a></li><li><a href="solutions.html#scheduled">Scheduled</a></li><li><a href="solutions.html#ecommerce">E-Commerce</a></li><li><a href="solutions.html#returns">Returns</a></li><li><a href="solutions.html#special">Special delivery</a></li></ul></nav>
       <nav class="f-col" aria-label="Company"><h3>COMPANY</h3><ul>
         <li><a href="about.html">About</a></li><li><a href="drivers.html">Drive for RAY</a></li><li><a href="technology.html">Technology</a></li><li><a href="contact.html">Careers</a></li><li><a href="contact.html">Contact</a></li></ul></nav>
       <nav class="f-col" aria-label="Resources"><h3>RESOURCES</h3><ul>
         <li><a href="tracking.html">Track shipment</a></li><li><a href="contact.html">Get a quote</a></li><li><a href="tracking.html#faq">FAQ</a></li><li><a href="contact.html">Support</a></li></ul></nav>
-      <nav class="f-col" aria-label="Legal"><h3>LEGAL</h3><ul>
-        <li><a href="#">Privacy Policy</a></li><li><a href="#">Terms of Service</a></li><li><a href="#">Accessibility</a></li></ul></nav>
     </div>
     <div class="f-word" aria-hidden="true">RAY <span>→</span> EXPRESS</div>
-    <div class="f-bottom"><span>© <span data-year>2026</span> RAY EXPRESS. ALL RIGHTS RESERVED.</span><span>DELIVERING THE FINAL MILE WITH PRECISION.</span></div>
+    <div class="f-bottom"><span>© <span data-year>2026</span> RAY EXPRESS. ALL RIGHTS RESERVED.</span><span>MOVING CANADA, ONE DELIVERY AT A TIME.</span></div>
   </div>
 </footer>
 

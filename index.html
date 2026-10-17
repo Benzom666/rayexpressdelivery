@@ -3,19 +3,21 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>RAY EXPRESS | Fast, Reliable Last-Mile Delivery</title>
-<meta name="description" content="RAY EXPRESS provides modern last-mile delivery and logistics solutions designed to move shipments quickly, reliably, and efficiently.">
+<title>RAY EXPRESS | Canada-Wide Delivery</title>
+<meta name="description" content="RAY EXPRESS provides delivery services across Canada, from everyday parcels and business routes to special shipments.">
 <meta name="theme-color" content="#0B0D10">
-<link rel="canonical" href="https://rayexpress.example/">
+<link rel="canonical" href="https://ray-express.vercel.app/">
 <meta property="og:title" content="RAY EXPRESS | Fast, Reliable Last-Mile Delivery">
-<meta property="og:description" content="Delivering the final mile with precision. Same-day, last-mile, scheduled and e-commerce delivery for modern businesses.">
+<meta property="og:description" content="Canada-wide delivery for everyday parcels, business routes and special shipments.">
 <meta property="og:type" content="website">
-<meta property="og:image" content="assets/hero-city.jpg">
+<meta property="og:image" content="assets/ray-express-logo.jpg">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;600;700&family=Instrument+Serif:ital@0;1&family=Manrope:wght@400;500;600;700;800&family=IBM+Plex+Mono:wght@400;500&display=swap" rel="stylesheet">
 <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Crect width='32' height='32' rx='7' fill='%230B0D10'/%3E%3Cpath d='M7 22 21 8' stroke='%2300E5FF' stroke-width='3.4' stroke-linecap='round'/%3E%3Cpath d='M15 22h9v-9' stroke='%23fff' stroke-width='3' stroke-linecap='round' stroke-linejoin='round' fill='none'/%3E%3C/svg%3E">
+<link rel="stylesheet" href="tokens.css">
 <link rel="stylesheet" href="styles.css">
+<link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css" integrity="sha256-p4NxAoJBhIIN+hmNHrzRCf9tD/miZyoHS5obTRR9BMY=" crossorigin="">
 </head>
 <body>
 <a class="skip" href="#main">Skip to content</a>
@@ -58,177 +60,55 @@
   </div>
 </div>
 
-<main id="main">
-  <!-- HERO -->
-  <section class="hero" aria-labelledby="hero-h">
-    <img class="bg" src="assets/hero-city.jpg" alt="City skyline at dusk, the delivery zone RAY EXPRESS serves" fetchpriority="high">
-    <div class="scrim" aria-hidden="true"></div>
-    <div class="hero-inner">
-      <p class="mono rv" style="font-size:.72rem;letter-spacing:.26em;color:#9FEFFF">FINAL-MILE LOGISTICS — EST. FOR PRECISION</p>
-      <h1 id="hero-h" class="rv rv-d1">The last mile, delivered <span class="serif-i">better.</span></h1>
-      <p class="hero-sub rv rv-d2">Fast, reliable delivery for modern business — from distribution center to doorstep, run on one intelligent network.</p>
-      <div class="hero-ctas rv rv-d3">
-        <a class="btn btn-light" href="contact.html">Get a quote <span class="arr" aria-hidden="true">→</span></a>
-        <a class="btn btn-line" href="tracking.html">Track a shipment</a>
+<main id="main" class="home-v3">
+  <section class="rx-hero" aria-labelledby="hero-h">
+    <div class="rx-hero-grid wrap">
+      <div class="rx-hero-copy">
+        <p class="rx-eyebrow"><span class="rx-dot"></span> CANADA-WIDE DELIVERY</p>
+        <h1 id="hero-h">Your city moves.<br><em>So do we.</em></h1>
+        <p>Delivery across Canada, from everyday parcels and business routes to shipments that need extra care. Local knowledge in the GTA, reach from coast to coast.</p>
+        <div class="rx-actions"><a class="btn btn-light" href="contact.html">Get a delivery quote <span aria-hidden="true">↗</span></a><a class="btn btn-line" href="#coverage">Explore coverage</a></div>
+        <div class="rx-hero-note"><span class="rx-bar"></span> From Toronto to wherever the route leads.</div>
       </div>
-      <div class="hero-meta rv rv-d3">
-        <div class="hstat"><b><span data-count="99">0</span>%+</b><span>ON-TIME TARGET*</span></div>
-        <div class="hstat"><b>24/7</b><span>VISIBILITY</span></div>
-        <div class="hstat"><b>Same-day</b><span>OPTIONS</span></div>
-        <div class="hstat"><b>6</b><span>SERVICE LINES</span></div>
-      </div>
+      <div class="rx-hero-visual"><img src="assets/ray-express-logo.jpg" alt="Ray Express orange delivery vehicle in motion" width="454" height="454"><div class="rx-visual-caption"><span>RAY / EXPRESS</span><span>DELIVERY IN MOTION ↗</span></div></div>
     </div>
   </section>
 
-  <!-- CLIENT MARQUEE -->
-  <div class="marq" aria-label="Illustrative client names">
-    <div class="mq-track">
-      <span>NORTHWIND RETAIL ◆ HELIX GOODS ◆ KARGO &amp; CO ◆ FRESHLINE ◆ VELT APPAREL ◆ LOOM SUPPLY ◆ NORTHWIND RETAIL ◆ HELIX GOODS ◆ KARGO &amp; CO ◆ FRESHLINE ◆ VELT APPAREL ◆ LOOM SUPPLY ◆&nbsp;</span>
-      <span aria-hidden="true">NORTHWIND RETAIL ◆ HELIX GOODS ◆ KARGO &amp; CO ◆ FRESHLINE ◆ VELT APPAREL ◆ LOOM SUPPLY ◆ NORTHWIND RETAIL ◆ HELIX GOODS ◆ KARGO &amp; CO ◆ FRESHLINE ◆ VELT APPAREL ◆ LOOM SUPPLY ◆&nbsp;</span>
-    </div>
-  </div>
+  <div class="rx-ticker" aria-label="Delivery coverage highlights"><div class="wrap"><span>DELIVERY ACROSS CANADA</span><span>↗</span><span>BUSINESS DELIVERY</span><span>↗</span><span>SPECIAL HANDLING</span><span>↗</span><span>GTA &amp; NATIONAL ROUTES</span></div></div>
 
-  <!-- INTRO -->
-  <section class="sec" aria-labelledby="intro-h">
-    <div class="wrap intro-grid">
-      <div>
-        <p class="kicker rv"><span class="no">01</span> Who we are</p>
-        <p class="intro-big rv rv-d1" id="intro-h" style="margin-top:1.2rem">We’re the infrastructure behind the doorbell — <span class="serif-i">precision delivery</span> for businesses that can’t afford a miss.</p>
-        <div class="intro-cols rv rv-d2">
-          <p>RAY EXPRESS runs final-mile delivery the way modern commerce demands: routed by software, staffed by professionals, and visible to everyone — you, your team, and your customer.</p>
-          <p>Retailers, e-commerce brands and B2B shippers plug into one network for same-day, scheduled and everyday parcels. No fleet to manage. No depot to lease. Just deliveries that land.</p>
-        </div>
-        <ul class="tick-chips rv rv-d2">
-          <li>TECHNOLOGY-DRIVEN</li><li>PROFESSIONAL COURIERS</li><li>PROOF ON EVERY DROP</li>
-        </ul>
-        <p class="rv rv-d3" style="margin-top:1.6rem"><a class="btn btn-ink" href="about.html">More about us <span class="arr" aria-hidden="true">→</span></a></p>
-      </div>
-      <figure class="ph ph-45 rv rv-d1">
-        <img src="assets/handoff.jpg" alt="Courier handing a parcel to a customer at the door" loading="lazy">
-        <figcaption>DOORSTEP HANDOFF · PROOF CAPTURED</figcaption>
-      </figure>
-    </div>
-  </section>
+  <section class="rx-section rx-intro" aria-labelledby="intro-h"><div class="wrap rx-intro-grid">
+    <div><p class="rx-label">A delivery partner close to home</p><h2 id="intro-h">The final mile feels different when it’s <em>your city.</em></h2></div>
+    <div><p>From Toronto to communities across Canada, Ray Express brings a hands-on approach to the routes that matter to your business. Tell us what you move and where it needs to go. We’ll help shape a practical delivery plan.</p><a class="rx-text-link" href="about.html">Get to know Ray Express <span aria-hidden="true">↗</span></a></div>
+  </div></section>
 
-  <!-- SOLUTIONS PREVIEW -->
-  <section class="sec" style="padding-top:0" aria-labelledby="sol-h">
-    <div class="wrap">
-      <div class="sec-head rv">
-        <p class="kicker"><span class="no">02</span> What we move</p>
-        <h2 id="sol-h">Six services. One network.</h2>
-        <p class="lede">Pick a lane or combine them — every shipment runs on the same routing, tracking and proof-of-delivery backbone.</p>
-      </div>
-      <div class="solfeat">
-        <a class="solbig rv" href="solutions.html#last-mile">
-          <img src="assets/handoff.jpg" alt="Parcel being delivered to a customer's hands" loading="lazy">
-          <span class="shade" aria-hidden="true"></span>
-          <span class="txt"><span class="mono" style="font-size:.68rem;letter-spacing:.22em;color:#9FEFFF">MOST BOOKED</span>
-          <h3>Last-mile delivery</h3><p>Distribution center to doorstep, at any volume — our core network, running daily.</p></span>
-        </a>
-        <div class="sollist rv rv-d1">
-          <a href="solutions.html#same-day"><span class="n">/01</span><span><b>Same-day delivery</b><small>Morning pickup, evening doorstep.</small></span><img class="thumb" src="assets/street.jpg" alt="" loading="lazy"></a>
-          <a href="solutions.html#scheduled"><span class="n">/02</span><span><b>Scheduled delivery</b><small>Two-hour windows, kept.</small></span><img class="thumb" src="assets/racking.jpg" alt="" loading="lazy"></a>
-          <a href="solutions.html#ecommerce"><span class="n">/03</span><span><b>E-commerce delivery</b><small>Built for spikes and scale.</small></span><img class="thumb" src="assets/fulfillment.jpg" alt="" loading="lazy"></a>
-          <a href="solutions.html#b2b"><span class="n">/04</span><span><b>Business &amp; B2B</b><small>Multi-stop commercial routes.</small></span><img class="thumb" src="assets/depot.jpg" alt="" loading="lazy"></a>
-          <a href="solutions.html#returns"><span class="n">/05</span><span><b>Returns management</b><small>Reverse logistics, simplified.</small></span><img class="thumb" src="assets/boxes.jpg" alt="" loading="lazy"></a>
-        </div>
-      </div>
-      <p class="rv" style="margin-top:1.6rem"><a class="btn btn-ink" href="solutions.html">Explore all solutions <span class="arr" aria-hidden="true">→</span></a></p>
+  <section class="rx-section rx-services" aria-labelledby="services-h"><div class="wrap">
+    <div class="rx-section-top"><p class="rx-label">What we deliver</p><a class="rx-text-link" href="solutions.html">All services <span aria-hidden="true">↗</span></a></div>
+    <h2 id="services-h">A service for <em>every kind of move.</em></h2>
+    <div class="rx-service-grid">
+      <a href="solutions.html#same-day" class="rx-service-card"><span class="rx-card-num">01 / FAST</span><h3>Same-day delivery</h3><p>For the shipments that can’t wait until tomorrow.</p><span class="rx-card-arrow" aria-hidden="true">↗</span></a>
+      <a href="solutions.html#last-mile" class="rx-service-card"><span class="rx-card-num">02 / EVERYDAY</span><h3>Last-mile delivery</h3><p>From pickup point to doorstep, with a route that fits.</p><span class="rx-card-arrow" aria-hidden="true">↗</span></a>
+      <a href="solutions.html#b2b" class="rx-service-card"><span class="rx-card-num">03 / BUSINESS</span><h3>Business routes</h3><p>Planned drops for stores, offices and suppliers.</p><span class="rx-card-arrow" aria-hidden="true">↗</span></a>
+      <a href="solutions.html#special" class="rx-service-card rx-service-special"><span class="rx-card-num">04 / EXTRA CARE</span><h3>Special delivery</h3><p>Flowers, medical items, regulated goods and more — handled according to the shipment.</p><span class="rx-card-arrow" aria-hidden="true">↗</span></a>
     </div>
-  </section>
+  </div></section>
 
-  <!-- PHOTO BAND -->
-  <section class="band" aria-label="Linehaul at dusk">
-    <img src="assets/sunset-truck.jpg" alt="Delivery truck on the highway at sunset" loading="lazy">
-    <div class="shade" aria-hidden="true"></div>
-    <div class="wrap"><div class="band-inner rv">
-      <p class="mono" style="font-size:.72rem;letter-spacing:.26em;color:#9FEFFF">FROM WAREHOUSE TO DOORSTEP</p>
-      <h2 style="margin-top:1rem">One route, <span class="serif-i">fully visible.</span></h2>
-      <p style="color:#D5DBE2;margin-top:1rem;line-height:1.7;max-width:34rem">Book in seconds, watch every scan, and get photo proof the moment it lands. That’s the whole experience — designed to be boring in the best way.</p>
-      <p style="margin-top:1.6rem"><a class="btn btn-light" href="tracking.html">Try live tracking <span class="arr" aria-hidden="true">→</span></a></p>
-    </div></div>
-  </section>
-
-  <!-- HOW IT WORKS -->
-  <section class="sec" aria-labelledby="how-h">
-    <div class="wrap">
-      <div class="sec-head rv">
-        <p class="kicker"><span class="no">03</span> How it works</p>
-        <h2 id="how-h">Booked, moved, tracked, home.</h2>
-      </div>
-      <ol class="steps">
-        <li class="step rv"><div class="sn">01</div><h3><span>BOOK</span>Send it</h3><p>Pickup, drops, windows — rates and an ETA back in seconds.</p></li>
-        <li class="step rv rv-d1"><div class="sn">02</div><h3><span>MOVE</span>We roll</h3><p>Smart dispatch puts your parcel on the optimal route.</p></li>
-        <li class="step rv rv-d2"><div class="sn">03</div><h3><span>TRACK</span>You watch</h3><p>Every scan live, with alerts before problems happen.</p></li>
-        <li class="step rv rv-d3"><div class="sn">04</div><h3><span>DELIVER</span>It’s home</h3><p>On-time arrival with photo, signature and timestamp.</p></li>
-      </ol>
+  <section class="rx-section rx-map-section" id="coverage" aria-labelledby="coverage-h"><div class="wrap">
+    <div class="rx-map-heading"><div><p class="rx-label">Where we go</p><h2 id="coverage-h">Across Canada.<br><em>Always in motion.</em></h2></div><p>Explore our Canada-wide reach, then zoom into the Greater Toronto Area for a closer look at a local route.</p></div>
+    <div class="rx-map-shell">
+      <div class="rx-map-toolbar"><div class="rx-map-key"><span class="rx-key-gta"></span> Illustrated routes <span class="rx-key-city"></span> Canadian cities</div><div class="rx-map-switch" role="group" aria-label="Map view"><button type="button" data-map-view="gta" aria-pressed="false">GTA</button><button type="button" data-map-view="canada" aria-pressed="true">Canada</button></div></div>
+      <div id="coverageMap" class="rx-map" role="img" aria-label="Interactive map of Canada with city markers, illustrated delivery routes and moving vehicles"></div>
+      <div class="rx-map-footer"><div><strong>Canada-wide delivery</strong><span>Illustrated routes · vehicle positions are visual demonstrations, not live tracking</span></div><a href="contact.html">Ask about your area <span aria-hidden="true">↗</span></a></div>
     </div>
-  </section>
+    <div class="rx-city-row"><span>VANCOUVER</span><span>CALGARY</span><span>EDMONTON</span><span>WINNIPEG</span><span>TORONTO</span><span>MONTRÉAL</span><span>HALIFAX ↗</span></div>
+  </div></section>
 
-  <!-- TECHNOLOGY PREVIEW -->
-  <section class="sec on-dark" style="background:var(--void)" aria-labelledby="tech-h">
-    <div class="wrap">
-      <div class="tech-cols">
-        <div>
-          <p class="kicker rv"><span class="no">04</span> Technology</p>
-          <h2 class="rv rv-d1" style="font-size:clamp(2rem,4.4vw,3.2rem);letter-spacing:-.025em;margin:1rem 0 .8rem">Logistics, powered by <span class="serif-i">intelligence.</span></h2>
-          <p class="lede rv rv-d1">Routing, visibility and proof in one system — built for dispatchers, loved by customers.</p>
-          <figure class="ph ph-32 rv rv-d2" style="margin-top:1.6rem">
-            <img src="assets/driver-nav.jpg" alt="Courier following live route guidance on a phone mount" loading="lazy">
-            <figcaption>LIVE ROUTE GUIDANCE · EVERY COURIER</figcaption>
-          </figure>
-        </div>
-        <div class="rv rv-d2">
-          <div class="dash" role="img" aria-label="Preview of the RAY control tower dashboard">
-            <div class="dash-bar"><span class="d" style="background:#FF5F57"></span><span class="d" style="background:#FEBC2E"></span><span class="d" style="background:#28C840"></span>&nbsp;RAY OPS · CONTROL TOWER<span class="live"><i></i>LIVE</span></div>
-            <div class="dash-kpis">
-              <div class="kpi"><span>ACTIVE DELIVERIES</span><b data-live="active">1,284</b></div>
-              <div class="kpi up"><span>ON-TIME TODAY</span><b>98.7<small>% ▲</small></b></div>
-              <div class="kpi"><span>ETA ACCURACY</span><b>±6<small> min</small></b></div>
-              <div class="kpi"><span>COURIERS OUT</span><b data-live="couriers">312</b></div>
-            </div>
-            <div class="drow"><div><b>RX-88231</b> · Crosstown · 3 stops left<div class="mono">SCAN 6:36 PM · DEPOT EAST</div></div><span class="st b">OUT FOR DELIVERY</span></div>
-            <div class="drow"><div><b>RX-10457</b> · Harbor route · on plan<div class="mono">SCAN 6:21 PM · HUB 02</div></div><span class="st g">IN TRANSIT</span></div>
-          </div>
-          <p style="margin-top:1.6rem"><a class="btn btn-light" href="technology.html">Inside the platform <span class="arr" aria-hidden="true">→</span></a></p>
-        </div>
-      </div>
-    </div>
-  </section>
+  <section class="rx-special-band" aria-labelledby="special-h"><div class="wrap rx-special-grid"><div class="rx-special-image"><img src="assets/handoff.jpg" alt="Parcel delivered carefully by hand" loading="lazy"></div><div class="rx-special-copy"><p class="rx-label">More than a standard parcel</p><h2 id="special-h">A little more care goes <em>a long way.</em></h2><p>Some deliveries call for a different plan. Flowers, medical supplies, delicate items and other time-sensitive shipments deserve the right handling, timing and communication. Cannabis requests are reviewed only where permitted and with the required authorizations.</p><a class="btn btn-light" href="solutions.html#special">Explore special delivery <span aria-hidden="true">↗</span></a></div></div></section>
 
-  <!-- TESTIMONIALS -->
-  <section class="sec" aria-labelledby="st-h">
-    <div class="wrap">
-      <p class="kicker rv"><span class="no">05</span> Customers</p>
-      <h2 id="st-h" class="rv rv-d1" style="font-size:clamp(2rem,4.4vw,3.2rem);letter-spacing:-.025em;margin:1rem 0 1.6rem">Teams that ship <span class="serif-i">daily.</span></h2>
-      <blockquote class="big-quote rv rv-d1">“Peak season used to terrify us. With RAY, our busiest week shipped <span class="serif-i">smoother</span> than our quietest.”</blockquote>
-      <p class="qwho rv rv-d1">CUSTOMER NAME · E-COMMERCE BRAND · PLACEHOLDER</p>
-      <div class="qgrid">
-        <div class="qcard rv"><p>“RAY EXPRESS transformed how we manage final-mile. On-time, visible, effortless.”</p>
-          <div class="person"><span class="avatar" aria-hidden="true">JK</span><div><b>Customer Name</b><span>OPERATIONS LEAD · PLACEHOLDER</span></div></div></div>
-        <div class="qcard rv rv-d1"><p>“Customers mention the tracking page in reviews. Delivery became a selling point.”</p>
-          <div class="person"><span class="avatar" aria-hidden="true">AR</span><div><b>Customer Name</b><span>RETAIL CHAIN · PLACEHOLDER</span></div></div></div>
-      </div>
-    </div>
-  </section>
+  <section class="rx-section rx-process" aria-labelledby="process-h"><div class="wrap"><p class="rx-label">Simple from the first conversation</p><h2 id="process-h">Tell us the job.<br><em>We’ll find the route.</em></h2><div class="rx-process-grid"><div><span>01</span><h3>Share the details</h3><p>Tell us what you’re sending, where it starts and where it needs to land.</p></div><div><span>02</span><h3>Build the plan</h3><p>We’ll discuss timing, handling needs and a delivery approach that fits.</p></div><div><span>03</span><h3>Keep moving</h3><p>Our team gets the delivery moving and stays reachable along the way.</p></div></div></div></section>
 
-  <!-- CTA -->
-  <section class="sec" style="padding-top:0" aria-labelledby="cta-h">
-    <div class="wrap">
-      <div class="cta-band rv">
-        <p class="mono" style="font-size:.7rem;letter-spacing:.24em;color:#9FEFFF">NO FLEETS · NO DEPOTS · NO DRAMA</p>
-        <h2 id="cta-h" style="margin-top:1rem">Ready to move <span class="serif-i">faster?</span></h2>
-        <p>Let’s build a delivery solution around your business — routes, windows and pricing shaped to how you actually ship.</p>
-        <div class="row">
-          <a class="btn btn-light" href="contact.html">Get a quote <span class="arr" aria-hidden="true">→</span></a>
-          <a class="btn btn-line" href="contact.html" style="border-color:rgba(255,255,255,.4)">Talk to our team</a>
-        </div>
-        <div class="giant" aria-hidden="true">RAY→</div>
-      </div>
-      <p class="fine">* Illustrative network targets shown for design preview — verified company figures replace these before launch. Photography via Unsplash.</p>
-    </div>
-  </section>
+  <section class="rx-end-cta" aria-labelledby="cta-h"><div class="wrap"><p class="rx-label">Ready when you are</p><h2 id="cta-h">Let’s get it <em>moving.</em></h2><p>Need a route across town or across the country? Start with a conversation.</p><div class="rx-actions"><a class="btn btn-light" href="contact.html">Request a quote <span aria-hidden="true">↗</span></a><a class="btn btn-line" href="tel:+16476948924">Call 647 694 8924</a></div></div></section>
 </main>
+
 
 <footer aria-label="Footer">
   <div class="wrap">
@@ -238,24 +118,18 @@
           <img class="brand-logo" src="assets/ray-express-logo.jpg" alt="" width="44" height="44">
           <span><b style="color:#fff">RAY <span>EXPRESS</span></b><small>FINAL-MILE LOGISTICS</small></span>
         </a>
-        <p>Delivering the final mile with precision — technology-driven last-mile logistics for businesses that can’t miss a delivery.</p>
-        <div class="socials">
-          <a href="#" aria-label="RAY EXPRESS on X"><svg width="17" height="17" viewBox="0 0 24 24" fill="currentColor"><path d="M18.9 2H22l-6.8 7.8L23.2 22h-6.3l-4.9-6.4L6.4 22H3.3l7.3-8.3L1.6 2H8l4.4 5.9L18.9 2Zm-1.1 18h1.7L7 3.9H5.2L17.8 20Z"/></svg></a>
-          <a href="#" aria-label="RAY EXPRESS on LinkedIn"><svg width="17" height="17" viewBox="0 0 24 24" fill="currentColor"><path d="M6.5 8.8v12H2.6v-12h3.9ZM4.5 2.7a2.3 2.3 0 1 1 0 4.6 2.3 2.3 0 0 1 0-4.6Zm7.6 8.2c.6-1 1.9-2.1 4-2.1 2.9 0 4.3 1.9 4.3 5.4v6.6h-3.9v-6c0-1.5-.5-2.5-1.9-2.5-1.4 0-2.2 1-2.5 1.9v6.6H8.2v-12h3.9v2.1Z"/></svg></a>
-          <a href="#" aria-label="RAY EXPRESS on Instagram"><svg width="17" height="17" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><rect x="3" y="3" width="18" height="18" rx="5"/><circle cx="12" cy="12" r="4"/><circle cx="17.2" cy="6.8" r="1.2" fill="currentColor" stroke="none"/></svg></a>
-        </div>
+        <p>Canada-wide delivery for everyday parcels, business routes and shipments that need extra care.</p>
+        <div class="rx-footer-contact"><a href="tel:+16476948924">647 694 8924</a><a href="tel:+12269776238">226 977 6238</a><a href="mailto:info@rayexpressdelivery.com">info@rayexpressdelivery.com</a><a href="mailto:info.rayexpressdelivery@gmail.com">info.rayexpressdelivery@gmail.com</a></div>
       </div>
       <nav class="f-col" aria-label="Solutions"><h3>SOLUTIONS</h3><ul>
-        <li><a href="solutions.html#same-day">Same-Day</a></li><li><a href="solutions.html#last-mile">Last-Mile</a></li><li><a href="solutions.html#scheduled">Scheduled</a></li><li><a href="solutions.html#ecommerce">E-Commerce</a></li><li><a href="solutions.html#returns">Returns</a></li></ul></nav>
+        <li><a href="solutions.html#same-day">Same-Day</a></li><li><a href="solutions.html#last-mile">Last-Mile</a></li><li><a href="solutions.html#scheduled">Scheduled</a></li><li><a href="solutions.html#ecommerce">E-Commerce</a></li><li><a href="solutions.html#returns">Returns</a></li><li><a href="solutions.html#special">Special delivery</a></li></ul></nav>
       <nav class="f-col" aria-label="Company"><h3>COMPANY</h3><ul>
         <li><a href="about.html">About</a></li><li><a href="drivers.html">Drive for RAY</a></li><li><a href="technology.html">Technology</a></li><li><a href="contact.html">Careers</a></li><li><a href="contact.html">Contact</a></li></ul></nav>
       <nav class="f-col" aria-label="Resources"><h3>RESOURCES</h3><ul>
         <li><a href="tracking.html">Track shipment</a></li><li><a href="contact.html">Get a quote</a></li><li><a href="tracking.html#faq">FAQ</a></li><li><a href="contact.html">Support</a></li></ul></nav>
-      <nav class="f-col" aria-label="Legal"><h3>LEGAL</h3><ul>
-        <li><a href="#">Privacy Policy</a></li><li><a href="#">Terms of Service</a></li><li><a href="#">Accessibility</a></li></ul></nav>
     </div>
     <div class="f-word" aria-hidden="true">RAY <span>→</span> EXPRESS</div>
-    <div class="f-bottom"><span>© <span data-year>2026</span> RAY EXPRESS. ALL RIGHTS RESERVED.</span><span>DELIVERING THE FINAL MILE WITH PRECISION.</span></div>
+    <div class="f-bottom"><span>© <span data-year>2026</span> RAY EXPRESS. ALL RIGHTS RESERVED.</span><span>MOVING CANADA, ONE DELIVERY AT A TIME.</span></div>
   </div>
 </footer>
 
@@ -265,5 +139,7 @@
 </div>
 
 <script src="app.js" defer></script>
+<script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js" integrity="sha256-20nQCchB9co0qIjJZRGuk2/Z9VM+kNiyxNV1lvTlZBo=" crossorigin="" defer></script>
+<script src="map.js" defer></script>
 </body>
 </html>
