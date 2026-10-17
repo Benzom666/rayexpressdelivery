@@ -1,0 +1,151 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Get a Quote — Talk Logistics | RAY EXPRESS</title>
+<meta name="description" content="Request a delivery quote from RAY EXPRESS. Same-day, last-mile, scheduled, e-commerce and B2B logistics — reply within one business day.">
+<meta name="theme-color" content="#0B0D10">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;600;700&family=Instrument+Serif:ital@0;1&family=Manrope:wght@400;500;600;700;800&family=IBM+Plex+Mono:wght@400;500&display=swap" rel="stylesheet">
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Crect width='32' height='32' rx='7' fill='%230B0D10'/%3E%3Cpath d='M7 22 21 8' stroke='%2300E5FF' stroke-width='3.4' stroke-linecap='round'/%3E%3Cpath d='M15 22h9v-9' stroke='%23fff' stroke-width='3' stroke-linecap='round' stroke-linejoin='round' fill='none'/%3E%3C/svg%3E">
+<link rel="stylesheet" href="styles.css">
+</head>
+<body>
+<a class="skip" href="#main">Skip to content</a>
+
+<header class="hdr" id="hdr">
+  <div class="bar">
+    <a class="brand" href="index.html" aria-label="RAY EXPRESS — home">
+      <img class="brand-logo" src="assets/ray-express-logo.jpg" alt="" width="44" height="44">
+      <span><b>RAY <span>EXPRESS</span></b><small>FINAL-MILE LOGISTICS</small></span>
+    </a>
+    <nav class="nav" aria-label="Primary">
+      <a href="index.html">Home</a>
+      <a href="solutions.html">Solutions</a>
+      <a href="tracking.html">Tracking</a>
+      <a href="technology.html">Technology</a>
+      <a href="about.html">About</a>
+      <a href="drivers.html">Drivers</a>
+      <a href="contact.html" aria-current="page">Contact</a>
+    </nav>
+    <div class="hdr-cta">
+      <a class="btn btn-line btn-sm" href="tracking.html">Track shipment</a>
+      <a class="btn btn-light btn-sm" href="contact.html">Get a quote <span class="arr" aria-hidden="true">→</span></a>
+    </div>
+    <button class="burger" id="burger" aria-expanded="false" aria-controls="mmenu" aria-label="Open menu"><i></i></button>
+  </div>
+</header>
+<div class="mmenu" id="mmenu">
+  <nav aria-label="Mobile">
+    <a class="mlink" href="index.html">Home</a>
+    <a class="mlink" href="solutions.html">Solutions</a>
+    <a class="mlink" href="tracking.html">Tracking</a>
+    <a class="mlink" href="technology.html">Technology</a>
+    <a class="mlink" href="about.html">About</a>
+    <a class="mlink" href="drivers.html">Drivers</a>
+    <a class="mlink" href="contact.html">Contact</a>
+  </nav>
+  <div class="row">
+    <a class="btn btn-line" href="tracking.html">Track</a>
+    <a class="btn btn-light" href="contact.html">Get a quote</a>
+  </div>
+</div>
+
+<main id="main">
+  <section class="phero" aria-labelledby="pg-h">
+    <img class="bg" src="assets/boxes.jpg" alt="Parcels packed and ready to ship" fetchpriority="high">
+    <div class="scrim" aria-hidden="true"></div>
+    <div class="phero-inner">
+      <p class="crumb rv"><a href="index.html">HOME</a> / CONTACT</p>
+      <h1 id="pg-h" class="rv rv-d1">Let’s talk <span class="serif-i">logistics.</span></h1>
+      <p class="lede rv rv-d2">Tell us how you ship. A logistics specialist replies within one business day with routes and pricing.</p>
+    </div>
+  </section>
+
+  <section class="sec" aria-label="Quote request">
+    <div class="wrap ct-grid">
+      <div class="form-card rv">
+        <div class="form-ok" id="formOk" role="status">Request received — we’ll reply within one business day. <span class="mono" id="formRef"></span></div>
+        <form class="qf" id="quoteForm" novalidate>
+          <div class="f2">
+            <div class="field"><label for="fName">Full name *</label><input id="fName" name="name" required autocomplete="name" placeholder="Jordan Lee"></div>
+            <div class="field"><label for="fCo">Company name *</label><input id="fCo" name="company" required autocomplete="organization" placeholder="Northwind Retail"></div>
+          </div>
+          <div class="f2">
+            <div class="field"><label for="fEmail">Email *</label><input id="fEmail" name="email" type="email" required autocomplete="email" placeholder="you@company.com"></div>
+            <div class="field"><label for="fPhone">Phone</label><input id="fPhone" name="phone" type="tel" autocomplete="tel" placeholder="+1 (___) ___-____"></div>
+          </div>
+          <div class="f2">
+            <div class="field"><label for="fPick">Pickup location *</label><input id="fPick" name="pickup" required placeholder="Warehouse or store address"></div>
+            <div class="field"><label for="fDrop">Delivery area *</label><input id="fDrop" name="delivery" required placeholder="City, zone or postcode"></div>
+          </div>
+          <div class="f2">
+            <div class="field"><label for="fNum">Shipments <small>(per week)</small></label><input id="fNum" name="volume" inputmode="numeric" placeholder="e.g. 250"></div>
+            <div class="field"><label for="fFreq">Delivery frequency</label>
+              <select id="fFreq" name="frequency"><option>Daily</option><option>Several times a week</option><option>Weekly</option><option>Seasonal / campaign peaks</option><option>One-off project</option></select></div>
+          </div>
+          <div class="field"><label for="fSvc">Service required</label>
+            <select id="fSvc" name="service"><option>Last-mile delivery</option><option>Same-day delivery</option><option>Scheduled delivery</option><option>E-commerce delivery</option><option>Business &amp; B2B</option><option>Returns management</option><option>Not sure — advise me</option></select></div>
+          <div class="field"><label for="fMsg">Message</label><textarea id="fMsg" name="message" placeholder="What are you shipping, and what does success look like?"></textarea></div>
+          <button class="btn btn-ink" type="submit" style="justify-content:center">Request a quote <span class="arr" aria-hidden="true">→</span></button>
+          <p style="font-size:.75rem;color:var(--muted)">Demo form — submissions stay in your browser. Connect an endpoint to go live.</p>
+        </form>
+      </div>
+      <div class="rv rv-d1">
+        <aside class="side" aria-label="Contact details">
+          <h3>Reach the team</h3>
+          <ul class="c-lines">
+            <li><div class="k">PHONE</div><div class="v mono">[+1 (555) 010-2030]</div></li>
+            <li><div class="k">EMAIL</div><div class="v mono">[hello@rayexpress.example]</div></li>
+            <li><div class="k">BUSINESS HOURS</div><div class="v">Mon–Sat · [08:00–20:00]</div></li>
+            <li><div class="k">SERVICE AREA</div><div class="v">[Your metro + surrounding zones]</div></li>
+          </ul>
+        </aside>
+        <figure class="ph ph-169" style="margin-top:1.2rem">
+          <img src="assets/street.jpg" alt="City streets where RAY couriers run daily" loading="lazy">
+          <figcaption>ON THE ROAD · MON–SAT</figcaption>
+        </figure>
+      </div>
+    </div>
+  </section>
+</main>
+
+<footer aria-label="Footer">
+  <div class="wrap">
+    <div class="f-grid">
+      <div class="f-brand">
+        <a class="brand" href="index.html" aria-label="RAY EXPRESS — home">
+          <img class="brand-logo" src="assets/ray-express-logo.jpg" alt="" width="44" height="44">
+          <span><b style="color:#fff">RAY <span>EXPRESS</span></b><small>FINAL-MILE LOGISTICS</small></span>
+        </a>
+        <p>Delivering the final mile with precision — technology-driven last-mile logistics for businesses that can’t miss a delivery.</p>
+        <div class="socials">
+          <a href="#" aria-label="RAY EXPRESS on X"><svg width="17" height="17" viewBox="0 0 24 24" fill="currentColor"><path d="M18.9 2H22l-6.8 7.8L23.2 22h-6.3l-4.9-6.4L6.4 22H3.3l7.3-8.3L1.6 2H8l4.4 5.9L18.9 2Zm-1.1 18h1.7L7 3.9H5.2L17.8 20Z"/></svg></a>
+          <a href="#" aria-label="RAY EXPRESS on LinkedIn"><svg width="17" height="17" viewBox="0 0 24 24" fill="currentColor"><path d="M6.5 8.8v12H2.6v-12h3.9ZM4.5 2.7a2.3 2.3 0 1 1 0 4.6 2.3 2.3 0 0 1 0-4.6Zm7.6 8.2c.6-1 1.9-2.1 4-2.1 2.9 0 4.3 1.9 4.3 5.4v6.6h-3.9v-6c0-1.5-.5-2.5-1.9-2.5-1.4 0-2.2 1-2.5 1.9v6.6H8.2v-12h3.9v2.1Z"/></svg></a>
+          <a href="#" aria-label="RAY EXPRESS on Instagram"><svg width="17" height="17" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><rect x="3" y="3" width="18" height="18" rx="5"/><circle cx="12" cy="12" r="4"/><circle cx="17.2" cy="6.8" r="1.2" fill="currentColor" stroke="none"/></svg></a>
+        </div>
+      </div>
+      <nav class="f-col" aria-label="Solutions"><h3>SOLUTIONS</h3><ul>
+        <li><a href="solutions.html#same-day">Same-Day</a></li><li><a href="solutions.html#last-mile">Last-Mile</a></li><li><a href="solutions.html#scheduled">Scheduled</a></li><li><a href="solutions.html#ecommerce">E-Commerce</a></li><li><a href="solutions.html#returns">Returns</a></li></ul></nav>
+      <nav class="f-col" aria-label="Company"><h3>COMPANY</h3><ul>
+        <li><a href="about.html">About</a></li><li><a href="drivers.html">Drive for RAY</a></li><li><a href="technology.html">Technology</a></li><li><a href="contact.html">Careers</a></li><li><a href="contact.html">Contact</a></li></ul></nav>
+      <nav class="f-col" aria-label="Resources"><h3>RESOURCES</h3><ul>
+        <li><a href="tracking.html">Track shipment</a></li><li><a href="contact.html">Get a quote</a></li><li><a href="tracking.html#faq">FAQ</a></li><li><a href="contact.html">Support</a></li></ul></nav>
+      <nav class="f-col" aria-label="Legal"><h3>LEGAL</h3><ul>
+        <li><a href="#">Privacy Policy</a></li><li><a href="#">Terms of Service</a></li><li><a href="#">Accessibility</a></li></ul></nav>
+    </div>
+    <div class="f-word" aria-hidden="true">RAY <span>→</span> EXPRESS</div>
+    <div class="f-bottom"><span>© <span data-year>2026</span> RAY EXPRESS. ALL RIGHTS RESERVED.</span><span>DELIVERING THE FINAL MILE WITH PRECISION.</span></div>
+  </div>
+</footer>
+
+<div class="sticky-cta" id="stickyCta">
+  <a class="btn btn-line" href="tracking.html" style="border-color:rgba(255,255,255,.35);color:#fff">Track</a>
+  <a class="btn btn-light" href="contact.html">Get a quote</a>
+</div>
+
+<script src="app.js" defer></script>
+</body>
+</html>

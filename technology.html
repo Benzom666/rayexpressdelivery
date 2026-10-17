@@ -1,0 +1,184 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Technology — Routing, Tracking & API | RAY EXPRESS</title>
+<meta name="description" content="Inside the RAY EXPRESS platform: smart routing, real-time tracking, proof of delivery, analytics and a developer-friendly API.">
+<meta name="theme-color" content="#0B0D10">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;600;700&family=Instrument+Serif:ital@0;1&family=Manrope:wght@400;500;600;700;800&family=IBM+Plex+Mono:wght@400;500&display=swap" rel="stylesheet">
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Crect width='32' height='32' rx='7' fill='%230B0D10'/%3E%3Cpath d='M7 22 21 8' stroke='%2300E5FF' stroke-width='3.4' stroke-linecap='round'/%3E%3Cpath d='M15 22h9v-9' stroke='%23fff' stroke-width='3' stroke-linecap='round' stroke-linejoin='round' fill='none'/%3E%3C/svg%3E">
+<link rel="stylesheet" href="styles.css">
+</head>
+<body>
+<a class="skip" href="#main">Skip to content</a>
+
+<header class="hdr" id="hdr">
+  <div class="bar">
+    <a class="brand" href="index.html" aria-label="RAY EXPRESS — home">
+      <img class="brand-logo" src="assets/ray-express-logo.jpg" alt="" width="44" height="44">
+      <span><b>RAY <span>EXPRESS</span></b><small>FINAL-MILE LOGISTICS</small></span>
+    </a>
+    <nav class="nav" aria-label="Primary">
+      <a href="index.html">Home</a>
+      <a href="solutions.html">Solutions</a>
+      <a href="tracking.html">Tracking</a>
+      <a href="technology.html" aria-current="page">Technology</a>
+      <a href="about.html">About</a>
+      <a href="drivers.html">Drivers</a>
+      <a href="contact.html">Contact</a>
+    </nav>
+    <div class="hdr-cta">
+      <a class="btn btn-line btn-sm" href="tracking.html">Track shipment</a>
+      <a class="btn btn-light btn-sm" href="contact.html">Get a quote <span class="arr" aria-hidden="true">→</span></a>
+    </div>
+    <button class="burger" id="burger" aria-expanded="false" aria-controls="mmenu" aria-label="Open menu"><i></i></button>
+  </div>
+</header>
+<div class="mmenu" id="mmenu">
+  <nav aria-label="Mobile">
+    <a class="mlink" href="index.html">Home</a>
+    <a class="mlink" href="solutions.html">Solutions</a>
+    <a class="mlink" href="tracking.html">Tracking</a>
+    <a class="mlink" href="technology.html">Technology</a>
+    <a class="mlink" href="about.html">About</a>
+    <a class="mlink" href="drivers.html">Drivers</a>
+    <a class="mlink" href="contact.html">Contact</a>
+  </nav>
+  <div class="row">
+    <a class="btn btn-line" href="tracking.html">Track</a>
+    <a class="btn btn-light" href="contact.html">Get a quote</a>
+  </div>
+</div>
+
+<main id="main">
+  <section class="phero" aria-labelledby="pg-h">
+    <img class="bg" src="assets/driver-nav.jpg" alt="Courier following live route guidance on the road" fetchpriority="high">
+    <div class="scrim" aria-hidden="true"></div>
+    <div class="phero-inner">
+      <p class="crumb rv"><a href="index.html">HOME</a> / TECHNOLOGY</p>
+      <h1 id="pg-h" class="rv rv-d1">The platform behind <span class="serif-i">every parcel.</span></h1>
+      <p class="lede rv rv-d2">Dispatchers see the whole city. Couriers see the next best turn. Customers see exactly when the doorbell rings.</p>
+    </div>
+  </section>
+
+  <section class="sec on-dark" style="background:var(--void)" aria-label="Control tower">
+    <div class="wrap">
+      <div class="tech-cols">
+        <div>
+          <p class="kicker rv"><span class="no">01</span> Control tower</p>
+          <h2 class="rv rv-d1" style="font-size:clamp(1.8rem,3.6vw,2.6rem);letter-spacing:-.02em;margin:1rem 0 .8rem">One screen for the entire operation.</h2>
+          <p class="lede rv rv-d1">Live map, live ETAs, live exceptions — your team watches the day unfold instead of chasing it by phone.</p>
+          <div class="dash rv rv-d2" role="img" aria-label="RAY control tower dashboard preview">
+            <div class="dash-bar"><span class="d" style="background:#FF5F57"></span><span class="d" style="background:#FEBC2E"></span><span class="d" style="background:#28C840"></span>&nbsp;RAY OPS · CONTROL TOWER<span class="live"><i></i>LIVE</span></div>
+            <div class="dash-kpis">
+              <div class="kpi"><span>ACTIVE DELIVERIES</span><b data-live="active">1,284</b></div>
+              <div class="kpi up"><span>ON-TIME TODAY</span><b>98.7<small>% ▲</small></b></div>
+              <div class="kpi"><span>AVG ETA ACCURACY</span><b>±6<small> min</small></b></div>
+              <div class="kpi"><span>COURIERS ON ROAD</span><b data-live="couriers">312</b></div>
+            </div>
+            <div class="drow"><div><b>RX-88231</b> · Crosstown · 3 stops left<div class="mono">SCAN 6:36 PM · DEPOT EAST</div></div><span class="st b">OUT FOR DELIVERY</span></div>
+            <div class="drow"><div><b>RX-10457</b> · Harbor route · on plan<div class="mono">SCAN 6:21 PM · HUB 02</div></div><span class="st g">IN TRANSIT</span></div>
+            <div class="drow"><div><b>RX-77120</b> · Window 7–9 PM<div class="mono">SCAN 5:58 PM · SORT LANE 4</div></div><span class="st a">AT DEPOT</span></div>
+          </div>
+        </div>
+        <div class="rv rv-d2">
+          <p class="kicker"><span class="no">02</span> Capabilities</p>
+          <div class="featrows">
+            <div class="feat"><h3><span>F.01</span>Real-time tracking</h3><p>Every scan streams instantly — to your dashboard, your customer’s link, and your webhooks.</p></div>
+            <div class="feat"><h3><span>F.02</span>Smart routing</h3><p>Routes re-optimized through the day for traffic, windows, load and driver hours.</p></div>
+            <div class="feat"><h3><span>F.03</span>Delivery visibility</h3><p>Branded tracking pages and proactive SMS — “20 minutes away” beats “where is it?”.</p></div>
+            <div class="feat"><h3><span>F.04</span>Proof of delivery</h3><p>Photo, signature and GPS timestamp sealed to every drop, retrievable forever.</p></div>
+            <div class="feat"><h3><span>F.05</span>Analytics</h3><p>On-time rate, attempt success, zone heatmaps — weekly reports your ops team will actually read.</p></div>
+            <div class="feat"><h3><span>F.06</span>API integration</h3><p>Rates, labels, tracking and events. If it ships, it can call RAY.</p></div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="sec" aria-labelledby="api-h">
+    <div class="wrap split">
+      <div class="rv">
+        <p class="kicker"><span class="no">03</span> For developers</p>
+        <h2 id="api-h" style="font-size:clamp(1.8rem,3.6vw,2.6rem);letter-spacing:-.02em;margin:1rem 0 .8rem">Two calls and you’re shipping.</h2>
+        <p>Create a delivery, get a rate and a tracking link back. Webhooks push every scan to your systems — WMS, OMS, support desk, all of it.</p>
+        <ul class="tick-chips">
+          <li>REST + WEBHOOKS</li><li>SANDBOX INCLUDED</li><li>SHOPIFY &amp; WOO PLUGINS</li>
+        </ul>
+        <p style="margin-top:1.6rem"><a class="btn btn-ink" href="contact.html">Get API access <span class="arr" aria-hidden="true">→</span></a></p>
+      </div>
+      <div class="rv rv-d1">
+        <pre class="api" aria-label="Example API usage" style="margin-top:0">POST <span class="k">/v1/deliveries</span>
+{ <span class="s">"pickup"</span>: <span class="s">"DC-East"</span>,
+  <span class="s">"dropoff"</span>: <span class="s">"14 Harbor St"</span>,
+  <span class="s">"window"</span>: <span class="s">"same-day"</span>,
+  <span class="s">"webhook"</span>: <span class="s">"…/ray-events"</span> }
+
+<span class="c"># → 201 · rate, ETA + tracking link</span>
+{ <span class="s">"id"</span>: <span class="s">"RX-88231"</span>,
+  <span class="s">"eta"</span>: <span class="s">"14:32"</span>,
+  <span class="s">"track_url"</span>: <span class="s">"ray.ex/t/RX-88231"</span> }</pre>
+        <figure class="ph ph-169" style="margin-top:1.2rem">
+          <img src="assets/racking.jpg" alt="Depot racking where API-booked parcels are sorted" loading="lazy">
+          <figcaption>SORTED BY SOFTWARE · MOVED BY PEOPLE</figcaption>
+        </figure>
+      </div>
+    </div>
+  </section>
+
+  <section class="sec" style="padding-top:0" aria-label="Call to action">
+    <div class="wrap">
+      <div class="cta-band rv">
+        <p class="mono" style="font-size:.7rem;letter-spacing:.24em;color:#9FEFFF">SEE IT ON YOUR OWN ROUTES</p>
+        <h2 style="margin-top:1rem">Pilot week. <span class="serif-i">Real parcels.</span></h2>
+        <p>Run a one-week pilot on your busiest lane — live dashboard, full tracking, honest numbers at the end.</p>
+        <div class="row">
+          <a class="btn btn-light" href="contact.html">Start a pilot <span class="arr" aria-hidden="true">→</span></a>
+          <a class="btn btn-line" href="solutions.html" style="border-color:rgba(255,255,255,.4)">Browse solutions</a>
+        </div>
+        <div class="giant" aria-hidden="true">API→</div>
+      </div>
+    </div>
+  </section>
+</main>
+
+<footer aria-label="Footer">
+  <div class="wrap">
+    <div class="f-grid">
+      <div class="f-brand">
+        <a class="brand" href="index.html" aria-label="RAY EXPRESS — home">
+          <img class="brand-logo" src="assets/ray-express-logo.jpg" alt="" width="44" height="44">
+          <span><b style="color:#fff">RAY <span>EXPRESS</span></b><small>FINAL-MILE LOGISTICS</small></span>
+        </a>
+        <p>Delivering the final mile with precision — technology-driven last-mile logistics for businesses that can’t miss a delivery.</p>
+        <div class="socials">
+          <a href="#" aria-label="RAY EXPRESS on X"><svg width="17" height="17" viewBox="0 0 24 24" fill="currentColor"><path d="M18.9 2H22l-6.8 7.8L23.2 22h-6.3l-4.9-6.4L6.4 22H3.3l7.3-8.3L1.6 2H8l4.4 5.9L18.9 2Zm-1.1 18h1.7L7 3.9H5.2L17.8 20Z"/></svg></a>
+          <a href="#" aria-label="RAY EXPRESS on LinkedIn"><svg width="17" height="17" viewBox="0 0 24 24" fill="currentColor"><path d="M6.5 8.8v12H2.6v-12h3.9ZM4.5 2.7a2.3 2.3 0 1 1 0 4.6 2.3 2.3 0 0 1 0-4.6Zm7.6 8.2c.6-1 1.9-2.1 4-2.1 2.9 0 4.3 1.9 4.3 5.4v6.6h-3.9v-6c0-1.5-.5-2.5-1.9-2.5-1.4 0-2.2 1-2.5 1.9v6.6H8.2v-12h3.9v2.1Z"/></svg></a>
+          <a href="#" aria-label="RAY EXPRESS on Instagram"><svg width="17" height="17" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><rect x="3" y="3" width="18" height="18" rx="5"/><circle cx="12" cy="12" r="4"/><circle cx="17.2" cy="6.8" r="1.2" fill="currentColor" stroke="none"/></svg></a>
+        </div>
+      </div>
+      <nav class="f-col" aria-label="Solutions"><h3>SOLUTIONS</h3><ul>
+        <li><a href="solutions.html#same-day">Same-Day</a></li><li><a href="solutions.html#last-mile">Last-Mile</a></li><li><a href="solutions.html#scheduled">Scheduled</a></li><li><a href="solutions.html#ecommerce">E-Commerce</a></li><li><a href="solutions.html#returns">Returns</a></li></ul></nav>
+      <nav class="f-col" aria-label="Company"><h3>COMPANY</h3><ul>
+        <li><a href="about.html">About</a></li><li><a href="drivers.html">Drive for RAY</a></li><li><a href="technology.html">Technology</a></li><li><a href="contact.html">Careers</a></li><li><a href="contact.html">Contact</a></li></ul></nav>
+      <nav class="f-col" aria-label="Resources"><h3>RESOURCES</h3><ul>
+        <li><a href="tracking.html">Track shipment</a></li><li><a href="contact.html">Get a quote</a></li><li><a href="tracking.html#faq">FAQ</a></li><li><a href="contact.html">Support</a></li></ul></nav>
+      <nav class="f-col" aria-label="Legal"><h3>LEGAL</h3><ul>
+        <li><a href="#">Privacy Policy</a></li><li><a href="#">Terms of Service</a></li><li><a href="#">Accessibility</a></li></ul></nav>
+    </div>
+    <div class="f-word" aria-hidden="true">RAY <span>→</span> EXPRESS</div>
+    <div class="f-bottom"><span>© <span data-year>2026</span> RAY EXPRESS. ALL RIGHTS RESERVED.</span><span>DELIVERING THE FINAL MILE WITH PRECISION.</span></div>
+  </div>
+</footer>
+
+<div class="sticky-cta" id="stickyCta">
+  <a class="btn btn-line" href="tracking.html" style="border-color:rgba(255,255,255,.35);color:#fff">Track</a>
+  <a class="btn btn-light" href="contact.html">Get a quote</a>
+</div>
+
+<script src="app.js" defer></script>
+</body>
+</html>

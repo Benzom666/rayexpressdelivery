@@ -1,0 +1,154 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Track Your Shipment | RAY EXPRESS</title>
+<meta name="description" content="Track your RAY EXPRESS delivery in real time — live scans, accurate ETAs and proof of delivery.">
+<meta name="theme-color" content="#0B0D10">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;600;700&family=Instrument+Serif:ital@0;1&family=Manrope:wght@400;500;600;700;800&family=IBM+Plex+Mono:wght@400;500&display=swap" rel="stylesheet">
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Crect width='32' height='32' rx='7' fill='%230B0D10'/%3E%3Cpath d='M7 22 21 8' stroke='%2300E5FF' stroke-width='3.4' stroke-linecap='round'/%3E%3Cpath d='M15 22h9v-9' stroke='%23fff' stroke-width='3' stroke-linecap='round' stroke-linejoin='round' fill='none'/%3E%3C/svg%3E">
+<link rel="stylesheet" href="styles.css">
+</head>
+<body>
+<a class="skip" href="#main">Skip to content</a>
+
+<header class="hdr" id="hdr">
+  <div class="bar">
+    <a class="brand" href="index.html" aria-label="RAY EXPRESS — home">
+      <img class="brand-logo" src="assets/ray-express-logo.jpg" alt="" width="44" height="44">
+      <span><b>RAY <span>EXPRESS</span></b><small>FINAL-MILE LOGISTICS</small></span>
+    </a>
+    <nav class="nav" aria-label="Primary">
+      <a href="index.html">Home</a>
+      <a href="solutions.html">Solutions</a>
+      <a href="tracking.html" aria-current="page">Tracking</a>
+      <a href="technology.html">Technology</a>
+      <a href="about.html">About</a>
+      <a href="drivers.html">Drivers</a>
+      <a href="contact.html">Contact</a>
+    </nav>
+    <div class="hdr-cta">
+      <a class="btn btn-line btn-sm" href="tracking.html">Track shipment</a>
+      <a class="btn btn-light btn-sm" href="contact.html">Get a quote <span class="arr" aria-hidden="true">→</span></a>
+    </div>
+    <button class="burger" id="burger" aria-expanded="false" aria-controls="mmenu" aria-label="Open menu"><i></i></button>
+  </div>
+</header>
+<div class="mmenu" id="mmenu">
+  <nav aria-label="Mobile">
+    <a class="mlink" href="index.html">Home</a>
+    <a class="mlink" href="solutions.html">Solutions</a>
+    <a class="mlink" href="tracking.html">Tracking</a>
+    <a class="mlink" href="technology.html">Technology</a>
+    <a class="mlink" href="about.html">About</a>
+    <a class="mlink" href="drivers.html">Drivers</a>
+    <a class="mlink" href="contact.html">Contact</a>
+  </nav>
+  <div class="row">
+    <a class="btn btn-line" href="tracking.html">Track</a>
+    <a class="btn btn-light" href="contact.html">Get a quote</a>
+  </div>
+</div>
+
+<main id="main">
+  <section class="phero" aria-labelledby="pg-h">
+    <img class="bg" src="assets/handoff.jpg" alt="Parcel arriving at a customer's door" fetchpriority="high">
+    <div class="scrim" aria-hidden="true"></div>
+    <div class="phero-inner">
+      <p class="crumb rv"><a href="index.html">HOME</a> / TRACKING</p>
+      <h1 id="pg-h" class="rv rv-d1">Where’s your <span class="serif-i">delivery?</span></h1>
+      <p class="lede rv rv-d2">One tracking number, the full story — every scan, a live ETA, and photo proof at the door.</p>
+    </div>
+  </section>
+
+  <section class="sec" aria-label="Shipment tracking tool">
+    <div class="wrap trackshell">
+      <div class="track-card rv">
+        <p class="mono" style="font-size:.68rem;letter-spacing:.22em;color:#9FEFFF">LIVE TRACKING · NO LOGIN NEEDED</p>
+        <h2 style="margin-top:.6rem">Track it in seconds.</h2>
+        <form class="track-form" id="trackForm" autocomplete="off">
+          <div class="track-input">
+            <label for="tnum">Tracking number</label>
+            <input id="tnum" name="tnum" placeholder="Enter tracking number — e.g. RX-88231" maxlength="24" required>
+            <button class="btn btn-light" type="submit">Track shipment <span class="arr" aria-hidden="true">→</span></button>
+          </div>
+        </form>
+        <div class="chips"><span>TRY A DEMO →</span>
+          <button class="chip" data-t="RX-88231">RX-88231</button>
+          <button class="chip" data-t="RX-10457">RX-10457</button>
+          <button class="chip" data-t="RX-77120">RX-77120</button>
+        </div>
+        <div class="t-result" id="tResult" role="status" aria-live="polite">
+          <div class="t-top">
+            <div><div class="k">Tracking number</div><div class="v mono" id="tNum">—</div></div>
+            <div><div class="k">Current status</div><div class="v"><span class="pill" id="tPill"><i></i><span>—</span></span></div></div>
+            <div><div class="k">Estimated delivery</div><div class="v" id="tEta">—</div></div>
+            <div><div class="k">Destination</div><div class="v" id="tDest">—</div></div>
+          </div>
+          <ol class="tline" id="tLine"></ol>
+          <p class="fine" id="tScan">—</p>
+        </div>
+      </div>
+      <aside class="rv rv-d1">
+        <p class="kicker"><span class="no">i</span> Reading your timeline</p>
+        <div class="faq">
+          <details open><summary>What do the statuses mean?</summary>
+            <p><b>Order received</b> — we have your booking. <b>Picked up</b> — the parcel left the sender. <b>In transit</b> — moving between hubs. <b>Out for delivery</b> — on the courier’s route today. <b>Delivered</b> — handed over, with photo proof.</p></details>
+          <details><summary>Where is my tracking number?</summary>
+            <p>It starts with RX- and arrives by email or SMS the moment your parcel is booked — usually within minutes of checkout or handover.</p></details>
+          <details><summary>My parcel says “at depot”. What now?</summary>
+            <p>It’s sorted and waiting for its route — typically out the next morning run. If it sits longer than 24 hours, contact us and we’ll chase it personally.</p></details>
+          <details><summary>Can I change the delivery address?</summary>
+            <p>Yes — up until the “out for delivery” scan. Use the link in your tracking SMS or call support and we’ll redirect it mid-route where possible.</p></details>
+        </div>
+        <div id="faq"></div>
+        <div class="side" style="margin-top:1.4rem">
+          <h3>Still stuck?</h3>
+          <p style="color:#A7B0BC;margin-top:.5rem;font-size:.92rem;line-height:1.65">Send your tracking number and we’ll reply with a human answer, not a status code.</p>
+          <p style="margin-top:1rem"><a class="btn btn-light btn-sm" href="contact.html">Contact support <span class="arr" aria-hidden="true">→</span></a></p>
+        </div>
+      </aside>
+    </div>
+  </section>
+</main>
+
+<footer aria-label="Footer">
+  <div class="wrap">
+    <div class="f-grid">
+      <div class="f-brand">
+        <a class="brand" href="index.html" aria-label="RAY EXPRESS — home">
+          <img class="brand-logo" src="assets/ray-express-logo.jpg" alt="" width="44" height="44">
+          <span><b style="color:#fff">RAY <span>EXPRESS</span></b><small>FINAL-MILE LOGISTICS</small></span>
+        </a>
+        <p>Delivering the final mile with precision — technology-driven last-mile logistics for businesses that can’t miss a delivery.</p>
+        <div class="socials">
+          <a href="#" aria-label="RAY EXPRESS on X"><svg width="17" height="17" viewBox="0 0 24 24" fill="currentColor"><path d="M18.9 2H22l-6.8 7.8L23.2 22h-6.3l-4.9-6.4L6.4 22H3.3l7.3-8.3L1.6 2H8l4.4 5.9L18.9 2Zm-1.1 18h1.7L7 3.9H5.2L17.8 20Z"/></svg></a>
+          <a href="#" aria-label="RAY EXPRESS on LinkedIn"><svg width="17" height="17" viewBox="0 0 24 24" fill="currentColor"><path d="M6.5 8.8v12H2.6v-12h3.9ZM4.5 2.7a2.3 2.3 0 1 1 0 4.6 2.3 2.3 0 0 1 0-4.6Zm7.6 8.2c.6-1 1.9-2.1 4-2.1 2.9 0 4.3 1.9 4.3 5.4v6.6h-3.9v-6c0-1.5-.5-2.5-1.9-2.5-1.4 0-2.2 1-2.5 1.9v6.6H8.2v-12h3.9v2.1Z"/></svg></a>
+          <a href="#" aria-label="RAY EXPRESS on Instagram"><svg width="17" height="17" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><rect x="3" y="3" width="18" height="18" rx="5"/><circle cx="12" cy="12" r="4"/><circle cx="17.2" cy="6.8" r="1.2" fill="currentColor" stroke="none"/></svg></a>
+        </div>
+      </div>
+      <nav class="f-col" aria-label="Solutions"><h3>SOLUTIONS</h3><ul>
+        <li><a href="solutions.html#same-day">Same-Day</a></li><li><a href="solutions.html#last-mile">Last-Mile</a></li><li><a href="solutions.html#scheduled">Scheduled</a></li><li><a href="solutions.html#ecommerce">E-Commerce</a></li><li><a href="solutions.html#returns">Returns</a></li></ul></nav>
+      <nav class="f-col" aria-label="Company"><h3>COMPANY</h3><ul>
+        <li><a href="about.html">About</a></li><li><a href="drivers.html">Drive for RAY</a></li><li><a href="technology.html">Technology</a></li><li><a href="contact.html">Careers</a></li><li><a href="contact.html">Contact</a></li></ul></nav>
+      <nav class="f-col" aria-label="Resources"><h3>RESOURCES</h3><ul>
+        <li><a href="tracking.html">Track shipment</a></li><li><a href="contact.html">Get a quote</a></li><li><a href="tracking.html#faq">FAQ</a></li><li><a href="contact.html">Support</a></li></ul></nav>
+      <nav class="f-col" aria-label="Legal"><h3>LEGAL</h3><ul>
+        <li><a href="#">Privacy Policy</a></li><li><a href="#">Terms of Service</a></li><li><a href="#">Accessibility</a></li></ul></nav>
+    </div>
+    <div class="f-word" aria-hidden="true">RAY <span>→</span> EXPRESS</div>
+    <div class="f-bottom"><span>© <span data-year>2026</span> RAY EXPRESS. ALL RIGHTS RESERVED.</span><span>DELIVERING THE FINAL MILE WITH PRECISION.</span></div>
+  </div>
+</footer>
+
+<div class="sticky-cta" id="stickyCta">
+  <a class="btn btn-line" href="tracking.html" style="border-color:rgba(255,255,255,.35);color:#fff">Track</a>
+  <a class="btn btn-light" href="contact.html">Get a quote</a>
+</div>
+
+<script src="app.js" defer></script>
+</body>
+</html>
