@@ -470,35 +470,39 @@ footer{background:#080f17}
 .rx-map-section{background:#0e1822}
 .rx-map-heading{display:flex;justify-content:space-between;align-items:end;gap:4rem;margin-bottom:2.2rem}
 .rx-map-heading h2{margin-top:1rem}
-.rx-map-heading>p{max-width:25rem;color:#c0ced6;line-height:1.75}
-.rx-map-shell{border:1px solid #476070;background:#182735;box-shadow:0 30px 65px rgba(0,0,0,.2)}
-.rx-map-toolbar,.rx-map-footer{padding:1rem 1.4rem;display:flex;align-items:center;justify-content:space-between;gap:1rem}
-.rx-map-toolbar{border-bottom:1px solid var(--line)}
-.rx-map-key{display:flex;align-items:center;gap:.5rem;color:#c5d5df;font:400 .7rem var(--font-mono);letter-spacing:.07em;text-transform:uppercase}
-.rx-key-route,.rx-key-city{width:.7rem;height:.7rem;border-radius:50%;display:inline-block;background:var(--deep)}
-.rx-key-city{background:var(--ray);margin-left:.8rem}
-.rx-map-switch{display:flex;gap:.25rem;background:#0d1924;padding:.25rem;border-radius:8px}
-.rx-map-switch button{background:transparent;border:0;color:#b8cbd6;font-size:.78rem;font-weight:800;padding:.55rem .8rem;border-radius:6px}
-.rx-map-switch button[aria-pressed="true"]{background:var(--deep);color:#0b1219}
-.rx-map{height:clamp(380px,49vw,580px);z-index:0}
-.rx-map.leaflet-container{background:radial-gradient(circle at 53% 54%,#17384a,#0b2535 67%,#081d2b)}
-.rx-map .leaflet-control-zoom a{background:#122a39;color:#e6f2f5;border-color:#476475}
-.rx-map .leaflet-control-zoom a:hover{background:#204254;color:#fff}
-.rx-map.leaflet-container .leaflet-control-attribution{background:#0d2433;color:#d1e5eb}
-.rx-map.leaflet-container .leaflet-control-attribution a{color:#a5e4f3}
-.rx-map .leaflet-container{font-family:var(--font-body)}
-.rx-map .leaflet-control-attribution{font-size:10px}
-.rx-map .leaflet-popup-content-wrapper{border-radius:8px;background:#11202d;color:#f6f9fa}
-.rx-map .leaflet-popup-tip{background:#11202d}
-.rx-city-pin{display:block;width:15px;height:15px;border:3px solid #0e2632;border-radius:50%;background:#84e1f2;box-shadow:0 0 0 3px rgba(132,225,242,.25)}
-.rx-car-pin{width:32px;height:32px;display:grid;place-items:center;background:#f88348;color:#0c1921;border:2px solid #fff;border-radius:50%;box-shadow:0 3px 18px rgba(0,0,0,.35);font-size:17px}
-.rx-car-pin svg{width:20px;height:20px}
-.rx-map-footer{border-top:1px solid var(--line)}
-.rx-map-footer strong,.rx-map-footer span{display:block}
-.rx-map-footer strong{font-size:.9rem}
-.rx-map-footer span{font-size:.72rem;color:#a7bcc8;margin-top:.2rem}
-.rx-map-footer a{color:var(--deep);font-weight:800;text-decoration:none;white-space:nowrap}
-.rx-city-row{display:flex;flex-wrap:wrap;gap:.65rem 1.7rem;margin-top:1.2rem;font:400 .67rem var(--font-mono);letter-spacing:.1em;color:#90a4b2}
+.rx-map-heading>p{max-width:27rem;color:#c0ced6;line-height:1.75}
+.rx-coverage-layout{display:grid;grid-template-columns:minmax(0,1.85fr) minmax(18rem,1fr);gap:1px;background:#37505d;border:1px solid #37505d}
+.rx-map-shell{min-width:0;background:#102330;display:flex;flex-direction:column}
+.rx-map-toolbar,.rx-map-footer{padding:.85rem 1.3rem;display:flex;align-items:center;justify-content:space-between;gap:1rem;font:500 .63rem var(--font-mono);letter-spacing:.12em}
+.rx-map-toolbar{color:#b8d0d8;border-bottom:1px solid #37505d}
+.rx-map-toolbar span:last-child{color:#8aa5b2}
+.rx-map{height:clamp(430px,42vw,560px);z-index:0}
+.rx-map.leaflet-container{background:#0a1d29;cursor:grab}
+.rx-map.leaflet-container:active{cursor:grabbing}
+.rx-map .leaflet-control-zoom{border:1px solid #5b7985;border-radius:0;box-shadow:none}
+.rx-map .leaflet-control-zoom a{background:#142f3b;color:#e6f2f5;border:0;border-radius:0;width:31px;height:31px;line-height:31px}
+.rx-map .leaflet-control-zoom a:first-child{border-bottom:1px solid #5b7985}
+.rx-map .leaflet-control-zoom a:hover{background:#244653;color:#fff}
+.rx-map .leaflet-popup-content-wrapper{border-radius:3px;background:#e9ece8;color:#14242c;box-shadow:0 12px 28px rgba(0,0,0,.28)}
+.rx-map .leaflet-popup-tip{background:#e9ece8}
+.rx-map-city{display:flex;align-items:center;gap:.4rem;white-space:nowrap;pointer-events:auto}
+.rx-map-city-dot{display:block;width:8px;height:8px;flex:none;background:#fa9567;border:2px solid #f7c2a7;border-radius:50%;box-shadow:0 0 0 2px #17303b}
+.rx-map-city-name{font:600 10px var(--font-mono);letter-spacing:.02em;color:#f2f6f4;text-shadow:0 1px 4px #061720,0 1px 8px #061720}
+@media(max-width:600px){.rx-map-city-name{display:none}}
+.rx-map-footer{margin-top:auto;border-top:1px solid #37505d;color:#a8c0c9;letter-spacing:.02em;font-size:.64rem}
+.rx-map-footer a{color:#c8e5e9;text-decoration:underline;text-underline-offset:2px}
+.rx-coverage-panel{min-width:0;background:#e7e8e1;color:#10212a;padding:clamp(1.8rem,3vw,3rem);display:flex;flex-direction:column;justify-content:space-between;gap:2rem}
+.rx-coverage-index{font:600 .68rem var(--font-mono);letter-spacing:.14em;color:#94502f}
+.rx-coverage-panel h3{font:700 clamp(2rem,3vw,3.15rem)/1.06 var(--font-display);letter-spacing:-.035em;margin:1.2rem 0 1.1rem}
+.rx-coverage-panel p{font-size:.95rem;line-height:1.7;color:#40525a;max-width:29ch}
+.rx-coverage-panel dl{margin:0;display:grid}
+.rx-coverage-panel dl div{display:grid;grid-template-columns:5.7rem 1fr;gap:.7rem;border-top:1px solid #bac6c5;padding:.8rem 0}
+.rx-coverage-panel dt{font:600 .62rem var(--font-mono);letter-spacing:.12em;color:#9a4d29}
+.rx-coverage-panel dd{margin:0;font-size:.82rem;font-weight:700;line-height:1.35}
+.rx-coverage-link{display:flex;justify-content:space-between;align-items:center;gap:1rem;padding-top:1rem;border-top:1px solid #889c9f;color:#10212a;text-decoration:none;font-weight:800}
+.rx-coverage-link:hover{color:#a4471d}
+.rx-coverage-link:focus-visible{outline:2px solid #a4471d;outline-offset:4px}
+@media(max-width:900px){.rx-coverage-layout{grid-template-columns:1fr}.rx-coverage-panel p{max-width:55ch}}
 .rx-special-band{background:#ee7946;color:#101820}
 .rx-special-grid{display:grid;grid-template-columns:1fr 1fr;min-height:35rem}
 .rx-special-image{margin-left:calc((min(var(--max),100vw - 3rem) - 100vw)/2);overflow:hidden}

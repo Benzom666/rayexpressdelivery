@@ -16,19 +16,18 @@ A Canada-wide delivery brand. The visual language comes from the supplied van ar
 - Use the named 4 point spacing scale in `tokens.css`.
 
 ## Pages
-- Home: still hero copy beside real courier footage, scrolling partner logo rail, service grid, interactive Canada map, special handling, process and contact CTA.
+- Home: still hero copy beside real courier footage, scrolling partner logo rail, service grid, editorial Canada coverage map, special handling, process and contact CTA.
 - Content pages: photographic hero, clear section sequence, shared header and footer.
 - Contact: direct details and a quote form that opens a prefilled email draft.
 
 ## Motion
 - No text reveal animation. The hero uses a short real delivery video that pauses offscreen or when reduced motion is requested.
 - Partner logos move in a continuous rail, pause on hover, and become a stationary list for reduced-motion visitors.
-- Illustrated vehicles move on national routes when the map enters view; they stop when out of view.
-- Respect reduced motion and keep the map vehicle still for visitors who request it.
+- The coverage map is static until a visitor pans or zooms it; it has no automatic movement.
 - Hover and press feedback use short transform or colour transitions only.
 
 ## Map and claims
-- Leaflet and a local Natural Earth outline provide the free interactive map with visible attribution.
-- The moving vehicle is expressly an illustration, not a live courier position.
-- Canada markers show coverage cities; the map does not promise a depot or guaranteed timing in every city.
+- Leaflet and local Natural Earth country and province boundaries provide the free interactive geographic map with visible attribution.
+- City labels are geographic references rather than depot locations or live vehicle positions.
+- Route availability and timing are discussed per request.
 - Regulated goods are discussed only where permitted and with the required authorizations.
